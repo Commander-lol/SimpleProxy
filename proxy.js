@@ -34,4 +34,4 @@ var server = require('http').createServer(function(req, res) {
 });
 
 server.listen(config.server.port);
-console.log('\033[36m\033[1m Hey Listen! Capproxy : ' + config.server.port + ' \033[0m');
+console.log('\033[36m\033[1m Hey Listen! SimpleProxy : ' + config.server.port + ' \033[0m');
