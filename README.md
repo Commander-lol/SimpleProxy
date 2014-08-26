@@ -7,12 +7,14 @@ Configuration is handled in two files: config/proxy.config.js and config/routes.
 proxy.config.js options
 =======================
 The default proxy config object is as follows:
-	{
-		injectssl: false,
-		server: {
-			port: 8080
-		}
+```
+{
+	injectssl: false,
+	server: {
+		port: 8080
 	}
+}
+```
 
 * `injectssl` : Whether or not to use the [ssl-root-cas](https://www.npmjs.org/package/ssl-root-cas) module for custom certificates
 * `server` : Http Server configurations, which are currently just the port since the proxy doesn't explicitly bind to a host
@@ -27,5 +29,5 @@ The routes config is a simple JSON object that defines how to handle each host. 
 * *Object* : This will be passed as the `options` value to the `proxy.web(req, res, options)` call from [node-http-proxy](https://github.com/nodejitsu/node-http-proxy/blob/master/lib/http-proxy.js#L28-L51)
 * *Function* : This function will be called with the arguments `req`, `res`, and `proxy`.
 
-For examples of the different options, have a look at [the routes.config.js file]()
+For examples of the different options, have a look at [the routes.config.js file](https://github.com/Commander-lol/SimpleProxy/blob/master/config/routes.config.js#L5-L20)
 
